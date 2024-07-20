@@ -5,9 +5,11 @@ import 'package:uhv_project/pages/home.dart';
 import 'package:uhv_project/pages/conflict-resolution.dart';
 import 'package:uhv_project/pages/community-service.dart';
 import 'package:uhv_project/pages/feedback.dart';
+import 'package:uhv_project/pages/login_page.dart';
 import 'package:uhv_project/pages/moral-mentor.dart';
 import 'package:uhv_project/pages/rightsquest.dart';
 import 'package:go_router/go_router.dart';
+import 'package:uhv_project/pages/signup_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,12 +17,22 @@ void main() {
 
 class MyApp extends StatelessWidget {
   final GoRouter _router = GoRouter(
-    initialLocation: '/',
+    initialLocation: '/login',
     routes: [
       GoRoute(
         path: '/',
         pageBuilder: (context, state) =>
             const NoTransitionPage(child: HomePage()),
+      ),
+      GoRoute(
+        path: '/signup',
+        pageBuilder: (context, state) =>
+            const NoTransitionPage(child: SignupPage()),
+      ),
+      GoRoute(
+        path: '/login',
+        pageBuilder: (context, state) =>
+            const NoTransitionPage(child: LoginPage()),
       ),
       GoRoute(
         path: '/moral-mentor',
