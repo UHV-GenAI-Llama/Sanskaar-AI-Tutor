@@ -3,6 +3,8 @@ import 'package:uhv_project/constants/size.dart';
 import 'package:uhv_project/widgets/home/web/navbar.dart';
 import 'package:uhv_project/widgets/home/mobile/drawer_mob.dart';
 import 'package:uhv_project/widgets/home/mobile/navbar_mob.dart';
+import 'package:uhv_project/widgets/moral-mentor/mobile/moral-mentor-mob.dart';
+import 'package:uhv_project/widgets/moral-mentor/web/moral-mentor-web.dart';
 
 class MoralMentorPage extends StatefulWidget {
   const MoralMentorPage({super.key});
@@ -31,12 +33,9 @@ class _MoralMentorPageState extends State<MoralMentorPage> {
                     },
                   ),
             endDrawer: isDesktop ? null : const DrawerMob(),
-            body: Center(
-                child: isDesktop
-                    ? const Text("Moral Mentor",
-                        style: TextStyle(color: Colors.white))
-                    : const Text("Moral Mentor",
-                        style: TextStyle(color: Colors.white))));
+            body: isDesktop
+                ? const MoralMentorScreenWeb()
+                : const MoralMentorScreenMob());
       },
     );
   }

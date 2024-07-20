@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:uhv_project/constants/size.dart';
+import 'package:uhv_project/widgets/heartistry/mobile/heartistry-mob.dart';
+import 'package:uhv_project/widgets/heartistry/web/heartistry-web.dart';
 import 'package:uhv_project/widgets/home/web/navbar.dart';
 import 'package:uhv_project/widgets/home/mobile/drawer_mob.dart';
 import 'package:uhv_project/widgets/home/mobile/navbar_mob.dart';
@@ -31,12 +33,9 @@ class _HeartistryPageState extends State<HeartistryPage> {
                     },
                   ),
             endDrawer: isDesktop ? null : const DrawerMob(),
-            body: Center(
-                child: isDesktop
-                    ? const Text("Heartistry",
-                        style: TextStyle(color: Colors.white))
-                    : const Text("Heartistry",
-                        style: TextStyle(color: Colors.white))));
+            body: isDesktop
+                ? const HeartistryScreenWeb()
+                : const HeartistryScreenMob());
       },
     );
   }
