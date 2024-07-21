@@ -25,7 +25,8 @@ class _ConfChatScreenWebState extends State<ConfChatScreenWeb> {
         decoration: const BoxDecoration(
           color: Color(0xFF001120),
         ),
-        child: Column(
+        child: SingleChildScrollView(
+            child: Column(
           children: [
             const SizedBox(height: 15),
             const Text(
@@ -146,7 +147,7 @@ class _ConfChatScreenWebState extends State<ConfChatScreenWeb> {
               ),
             ),
           ],
-        ),
+        )),
       ),
     );
   }
