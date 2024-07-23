@@ -3,6 +3,7 @@ import 'package:uhv_project/constants/size.dart';
 import 'package:uhv_project/widgets/home/web/navbar.dart';
 import 'package:uhv_project/widgets/home/mobile/drawer_mob.dart';
 import 'package:uhv_project/widgets/home/mobile/navbar_mob.dart';
+import 'package:uhv_project/widgets/rightsquest/mobile/Screens/levels_rq.dart';
 import 'package:uhv_project/widgets/rightsquest/mobile/rightsquest-mob.dart';
 import 'package:uhv_project/widgets/rightsquest/web/rightsquest-web.dart';
 
@@ -34,8 +35,8 @@ class _RightsQuestPageState extends State<RightsQuestPage> {
                   ),
             endDrawer: isDesktop ? null : const DrawerMob(),
             body: isDesktop
-                ? const RightsQuestScreenWeb()
-                : const RightsQuestScreenMob());
+                ?  RightsQuestScreenMob()
+                :  RightsQuestScreenMob());
       },
     );
   }
