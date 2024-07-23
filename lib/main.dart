@@ -6,7 +6,9 @@ import 'package:uhv_project/pages/conflict-resolution.dart';
 import 'package:uhv_project/pages/community-service.dart';
 import 'package:uhv_project/pages/feedback.dart';
 import 'package:uhv_project/pages/login_page.dart';
-import 'package:uhv_project/pages/moral-mentor.dart';
+import 'package:uhv_project/pages/moral-mentor/home.dart';
+import 'package:uhv_project/pages/moral-mentor/profile.dart';
+import 'package:uhv_project/pages/moral-mentor/scenarios_page.dart';
 import 'package:uhv_project/pages/rightsquest.dart';
 import 'package:go_router/go_router.dart';
 import 'package:uhv_project/pages/signup_page.dart';
@@ -25,6 +27,11 @@ class MyApp extends StatelessWidget {
             const NoTransitionPage(child: HomePage()),
       ),
       GoRoute(
+        path: '/profile',
+        pageBuilder: (context, state) =>
+            const NoTransitionPage(child: ProfilePage()),
+      ),
+      GoRoute(
         path: '/signup',
         pageBuilder: (context, state) =>
             const NoTransitionPage(child: SignupPage()),
@@ -38,6 +45,11 @@ class MyApp extends StatelessWidget {
         path: '/moral-mentor',
         pageBuilder: (context, state) =>
             const NoTransitionPage(child: MoralMentorPage()),
+      ),
+      GoRoute(
+        path: '/moral-mentor/scenarios',
+        pageBuilder: (context, state) =>
+            NoTransitionPage(child: ScenariosPage()),
       ),
       GoRoute(
         path: '/rightsquest',
