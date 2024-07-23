@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:uhv_project/pages/health-mentor.dart';
 import 'package:uhv_project/pages/heartistry.dart';
@@ -12,8 +13,13 @@ import 'package:uhv_project/pages/moral-mentor/scenarios_page.dart';
 import 'package:uhv_project/pages/rightsquest.dart';
 import 'package:go_router/go_router.dart';
 import 'package:uhv_project/pages/signup_page.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(MyApp());
 }
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 
 class NavButton extends StatefulWidget {
   final String text;
@@ -13,6 +14,13 @@ class NavButton extends StatefulWidget {
 
 class _NavButtonState extends State<NavButton> {
   bool _isHovering = false;
+  final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+
+  @override
+  void initState() {
+    analytics.setAnalyticsCollectionEnabled(true);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +35,9 @@ class _NavButtonState extends State<NavButton> {
           margin: const EdgeInsets.fromLTRB(12, 20, 12, 0),
           child: TextButton(
             onPressed: () {
+              analytics.logEvent(
+                  name: "pages_tracked",
+                  parameters: {"page_name": widget.text});
               context.go(widget.routeName);
             },
             child: Text(

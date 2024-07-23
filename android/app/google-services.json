@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "404860496703",
+    "project_id": "uhv-analytics",
+    "storage_bucket": "uhv-analytics.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404860496703:android:a095a04b231cd89a86418a",
+        "android_client_info": {
+          "package_name": "com.example.uhv_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzuOtRjbgXRTnd9rx9vE8m5l1ASDYp79o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404860496703:android:e63550b5bf7cd4be86418a",
+        "android_client_info": {
+          "package_name": "com.example.uhv_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzuOtRjbgXRTnd9rx9vE8m5l1ASDYp79o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -36,7 +36,10 @@ class Navbar extends StatelessWidget implements PreferredSizeWidget {
               ]))),
       actions: [
         for (int i = 0; i < navTitles.length; i++)
-          (NavButton(text: navTitles[i], routeName: navPaths[i])),
+          (NavButton(
+            text: navTitles[i],
+            routeName: navPaths[i],
+          )),
         const SizedBox(width: 20),
       ],
     );
