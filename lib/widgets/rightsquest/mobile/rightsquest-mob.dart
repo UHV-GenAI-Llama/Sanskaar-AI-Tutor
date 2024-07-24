@@ -19,7 +19,7 @@ class _RightsQuestScreenMobState extends State<RightsQuestScreenMob> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("rq_images/LoginAvtar.png",height: 150),
+              Image.asset("assets/rq_images/LoginAvtar.png",height: 150),
               const Text(
                 "RightsQuest",
                 style: TextStyle(

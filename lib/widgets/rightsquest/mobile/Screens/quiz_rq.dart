@@ -106,7 +106,7 @@ class _QuizPageState extends State<QuizPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset('rq_images/ErrorRobot.png', height: 150,),
+                  Image.asset('assets/rq_images/ErrorRobot.png', height: 150,),
                   SizedBox(height: 20),
                   Text('Error: ${snapshot.error}', style: TextStyle(fontWeight: FontWeight.bold),),
                 ],
