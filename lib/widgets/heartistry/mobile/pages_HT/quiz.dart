@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../classes/api_service.dart';
+import 'package:uhv_project/widgets/heartistry/mobile/classes/api_service.dart';
 import 'colors.dart';
 
 

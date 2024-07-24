@@ -10,7 +10,7 @@ class LevelsPage extends StatelessWidget {
     'Physical Bullying',
     'Social Bullying',
     'Prejudicial Bullying',
-    'Social Bullying'
+    'Cyber Bullying'
   ];
 
   @override
@@ -61,6 +61,7 @@ class LevelsPage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) => QuizPage(rightName: levels[index]),
+
                           ),
                         );
                       },

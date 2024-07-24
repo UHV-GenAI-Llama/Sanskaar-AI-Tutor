@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math';  // for shuffling the options
-
 import '../requests/ApiService.dart';
+import 'package:uhv_project/widgets/rightsquest/mobile/Screens/levels_rq.dart';
 
 class QuizPage extends StatefulWidget {
   final String rightName;
@@ -209,15 +209,15 @@ class _QuizPageState extends State<QuizPage> {
                         ),
                       ),
                       SizedBox(height: 20),
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => LevelsPage()),
-                          );
-                        },
-                        child: Text('Next'),
-                      ),
+                      // ElevatedButton(
+                      //   onPressed: () {
+                      //     Navigator.push(
+                      //       context,
+                      //       MaterialPageRoute(builder: (context) =>  LevelsPage()),
+                      //     );
+                      //   },
+                      //   child: Text('Next'),
+                      // ),
                     ],
                   ],
                 ),

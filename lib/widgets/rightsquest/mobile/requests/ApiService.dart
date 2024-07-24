@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  final String apiUrl = "https://b1c9-34-168-202-89.ngrok-free.app"; // Use the correct API URL
+  final String apiUrl = "https://47fd-35-230-116-157.ngrok-free.app"; // Use the correct API URL
 
   Future<Map<String, dynamic>> fetchQuizData(String rightName) async {
     try {
