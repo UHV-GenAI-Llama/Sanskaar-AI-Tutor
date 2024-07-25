@@ -62,15 +62,17 @@ class ProfilePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Mentor',
+                'Pankaj Gupta',
                 style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
+                    fontWeight: FontWeight.bold, color: Colors.white),
               ),
               const SizedBox(height: 8),
               Text(
                 'Ethical Thinker Level: Advanced',
-                style: Theme.of(context).textTheme.titleMedium,
+                style: Theme.of(context)
+                    .textTheme
+                    .titleMedium
+                    ?.copyWith(color: Colors.white),
               ),
             ],
           ),
@@ -85,7 +87,10 @@ class ProfilePage extends StatelessWidget {
       children: [
         Text(
           'Your Ethics Performance',
-          style: Theme.of(context).textTheme.titleLarge,
+          style: Theme.of(context)
+              .textTheme
+              .titleLarge
+              ?.copyWith(color: Colors.white),
         ),
         const SizedBox(height: 16),
         constraints.maxWidth > 600
@@ -157,12 +162,18 @@ class ProfilePage extends StatelessWidget {
               children: [
                 Text(
                   stats[index]['value']!,
-                  style: Theme.of(context).textTheme.headlineSmall,
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineSmall
+                      ?.copyWith(color: Colors.black),
                 ),
                 const SizedBox(height: 4),
                 Text(
                   stats[index]['label']!,
-                  style: Theme.of(context).textTheme.bodySmall,
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodySmall
+                      ?.copyWith(color: Colors.black),
                   textAlign: TextAlign.center,
                 ),
               ],
@@ -186,7 +197,10 @@ class ProfilePage extends StatelessWidget {
       children: [
         Text(
           'Recent Activity',
-          style: Theme.of(context).textTheme.titleLarge,
+          style: Theme.of(context)
+              .textTheme
+              .titleLarge
+              ?.copyWith(color: Colors.white),
         ),
         const SizedBox(height: 16),
         ListView.builder(
@@ -196,7 +210,10 @@ class ProfilePage extends StatelessWidget {
           itemBuilder: (context, index) {
             return ListTile(
               leading: const Icon(Icons.star, color: Colors.amber),
-              title: Text(activities[index]),
+              title: Text(
+                activities[index],
+                style: const TextStyle(color: Colors.white),
+              ),
             );
           },
         ),

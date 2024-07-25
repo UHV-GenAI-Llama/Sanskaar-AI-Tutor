@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uhv_project/widgets/rightsquest/mobile/Screens/quiz_rq.dart';
+import 'package:uhv_project/widgets/rightsquest/Screens/quiz_rq.dart';
 
 class LevelsPage extends StatefulWidget {
   @override
@@ -120,13 +120,21 @@ class _LevelsPageState extends State<LevelsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    //  backgroundColor: Color(0xFF001120),
+      //  backgroundColor: Color(0xFF001120),
       appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text('Select a Level',style: TextStyle(color: Colors.white),),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        backgroundColor: const Color(0xFF001120),
+        title: const Text(
+          'Select a Level',
+          style: TextStyle(color: Colors.white),
+        ),
       ),
       body: Column(
-
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -135,13 +143,13 @@ class _LevelsPageState extends State<LevelsPage> {
                 Expanded(
                   child: TextField(
                     controller: _controller,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Enter a right to study',
                       border: OutlineInputBorder(),
                     ),
                   ),
                 ),
-                SizedBox(width: 8.0),
+                const SizedBox(width: 8.0),
                 ElevatedButton(
                   onPressed: () => _searchOrAddRight(context),
                   child: Text('Search'),
@@ -153,16 +161,20 @@ class _LevelsPageState extends State<LevelsPage> {
             child: ListView.builder(
               itemCount: rightsCategories.length,
               itemBuilder: (context, categoryIndex) {
-                String category = rightsCategories.keys.elementAt(categoryIndex);
+                String category =
+                    rightsCategories.keys.elementAt(categoryIndex);
                 List<String> rights = rightsCategories[category]!;
-                int completedRights = rights.where((right) => rightsProgress[right] == true).length;
-                double progress = rights.isNotEmpty ? completedRights / rights.length : 0.0;
+                int completedRights = rights
+                    .where((right) => rightsProgress[right] == true)
+                    .length;
+                double progress =
+                    rights.isNotEmpty ? completedRights / rights.length : 0.0;
 
                 return ExpansionTile(
                   title: Row(
                     children: [
                       Expanded(child: Text(category)),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       Container(
                         width: 100,
                         height: 10,
@@ -172,7 +184,7 @@ class _LevelsPageState extends State<LevelsPage> {
                           color: Colors.blue,
                         ),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       Text('${(progress * 100).toStringAsFixed(0)}%'),
                     ],
                   ),
@@ -195,7 +207,8 @@ class _LevelsPageState extends State<LevelsPage> {
                                     builder: (context) {
                                       return QuizPage(
                                         rightName: right,
-                                        onCompletion: () => _updateProgress(right),
+                                        onCompletion: () =>
+                                            _updateProgress(right),
                                       );
                                     },
                                   ),

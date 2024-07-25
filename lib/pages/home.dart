@@ -89,12 +89,12 @@ class _HomePageState extends State<HomePage> {
                         ),
                         const SizedBox(height: 60),
                         Section(
-                            title: 'Health Mentor',
+                            title: 'PrepPal',
                             description:
                                 'We are dedicated to promoting social responsibility and community engagement. Our platform connects volunteers, organizations, and community members who share a passion for making a positive impact. Together, we can create meaningful change and build a stronger, more compassionate community.',
-                            buttonText: 'Health Mentor',
+                            buttonText: 'PrepPal',
                             onPressed: () {
-                              context.go('/health-mentor');
+                              context.go('/preppal');
                             },
                             imagePath: 'assets/images/community-service.png'),
                         const SizedBox(height: 60),
@@ -156,12 +156,12 @@ class _HomePageState extends State<HomePage> {
                         ),
                         const SizedBox(height: 80),
                         SectionMob(
-                          title: 'Health Mentor',
+                          title: 'PrepPal',
                           description:
                               'We are dedicated to promoting social responsibility and community engagement. Our platform connects volunteers, organizations, and community members who share a passion for making a positive impact. Together, we can create meaningful change and build a stronger, more compassionate community.',
-                          buttonText: 'Health Mentor',
+                          buttonText: 'PrepPal',
                           onPressed: () {
-                            context.go('/health-mentor');
+                            context.go('/preppal');
                           },
                           imagePath: 'assets/images/community-service.png',
                         ),

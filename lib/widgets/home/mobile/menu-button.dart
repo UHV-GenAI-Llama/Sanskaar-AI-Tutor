@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:uhv_project/constants/colors.dart';
 import 'package:go_router/go_router.dart';
@@ -14,6 +15,14 @@ class MenuButton extends StatefulWidget {
 }
 
 class _MenuButtonState extends State<MenuButton> {
+  final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+
+  @override
+  void initState() {
+    analytics.setAnalyticsCollectionEnabled(true);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final isActive =
@@ -22,6 +31,9 @@ class _MenuButtonState extends State<MenuButton> {
 
     return ListTile(
       onTap: () {
+        analytics.logEvent(
+                  name: "pages_tracked",
+                  parameters: {"page_name": widget.title});
         context.go(widget.path);
       },
       iconColor: isActive ? const Color(0xffA6FAFF) : CustomColor.lightGrey,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uhv_project/widgets/rightsquest/mobile/Screens/levels_rq.dart';
+import 'package:uhv_project/widgets/rightsquest/Screens/levels_rq.dart';
 
 class RightsQuestScreenMob extends StatefulWidget {
   const RightsQuestScreenMob({super.key});
@@ -19,7 +19,7 @@ class _RightsQuestScreenMobState extends State<RightsQuestScreenMob> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("assets/rq_images/LoginAvtar.png",height: 150),
+              Image.asset("assets/rq_images/LoginAvtar.png", height: 150),
               const Text(
                 "RightsQuest",
                 style: TextStyle(
@@ -56,7 +56,10 @@ class _RightsQuestScreenMobState extends State<RightsQuestScreenMob> {
                 ),
                 child: const Text(
                   "Get Started",
-                  style: TextStyle(fontSize: 18,color: Colors.black,fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
             ],

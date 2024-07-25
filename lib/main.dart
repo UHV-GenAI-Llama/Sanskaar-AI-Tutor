@@ -1,18 +1,22 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:uhv_project/pages/health-mentor.dart';
+import 'package:uhv_project/pages/preppal.dart';
 import 'package:uhv_project/pages/heartistry.dart';
 import 'package:uhv_project/pages/home.dart';
 import 'package:uhv_project/pages/conflict-resolution.dart';
 import 'package:uhv_project/pages/community-service.dart';
 import 'package:uhv_project/pages/feedback.dart';
 import 'package:uhv_project/pages/login_page.dart';
-import 'package:uhv_project/pages/moral-mentor/home.dart';
-import 'package:uhv_project/pages/moral-mentor/profile.dart';
-import 'package:uhv_project/pages/moral-mentor/scenarios_page.dart';
+import 'package:uhv_project/pages/moral-mentor.dart';
+import 'package:uhv_project/pages/profile.dart';
+import 'package:uhv_project/widgets/moral-mentor/scenarios_page.dart';
 import 'package:uhv_project/pages/rightsquest.dart';
 import 'package:go_router/go_router.dart';
 import 'package:uhv_project/pages/signup_page.dart';
+import 'package:uhv_project/widgets/preppal/examprep.dart';
+import 'package:uhv_project/widgets/preppal/fitness.dart';
+import 'package:uhv_project/widgets/preppal/nutrition.dart';
+import 'package:uhv_project/widgets/preppal/stress.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -73,9 +77,25 @@ class MyApp extends StatelessWidget {
             const NoTransitionPage(child: ConflictResolutionPage()),
       ),
       GoRoute(
-        path: '/health-mentor',
+        path: '/preppal',
         pageBuilder: (context, state) =>
-            const NoTransitionPage(child: HealthMentorPage()),
+            const NoTransitionPage(child: PrepPalPage()),
+      ),
+      GoRoute(
+        path: '/preppal/exam',
+        pageBuilder: (context, state) => NoTransitionPage(child: ExamPrep()),
+      ),
+      GoRoute(
+        path: '/preppal/nutrition',
+        pageBuilder: (context, state) => NoTransitionPage(child: Nutrition()),
+      ),
+      GoRoute(
+        path: '/preppal/fitness',
+        pageBuilder: (context, state) => NoTransitionPage(child: Fitness()),
+      ),
+      GoRoute(
+        path: '/preppal/stress',
+        pageBuilder: (context, state) => NoTransitionPage(child: Stress()),
       ),
       GoRoute(
         path: '/heartistry',

@@ -24,15 +24,15 @@ class _LoginPageState extends State<LoginPage> {
         return Scaffold(
             key: scaffoldKey,
             backgroundColor: const Color(0xFF001120),
-            appBar: isDesktop
-                ? const Navbar()
-                : NavbarMob(
-                    onMenuTap: () {
-                      // This will open right side drawer
-                      scaffoldKey.currentState?.openEndDrawer();
-                    },
-                  ),
-            endDrawer: isDesktop ? null : const DrawerMob(),
+            // appBar: isDesktop
+            //     ? const Navbar()
+            //     : NavbarMob(
+            //         onMenuTap: () {
+            //           // This will open right side drawer
+            //           scaffoldKey.currentState?.openEndDrawer();
+            //         },
+            //       ),
+            // endDrawer: isDesktop ? null : const DrawerMob(),
             body: isDesktop ? const LoginWeb() : const LoginMob());
       },
     );

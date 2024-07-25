@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'dart:math';  // for shuffling the options
+import 'dart:math'; // for shuffling the options
 import '../requests/ApiService.dart';
-import 'package:uhv_project/widgets/rightsquest/mobile/Screens/levels_rq.dart';
+import 'package:uhv_project/widgets/rightsquest/Screens/levels_rq.dart';
 
 class QuizPage extends StatefulWidget {
   final String rightName;
@@ -74,18 +74,21 @@ class _QuizPageState extends State<QuizPage> {
     return Scaffold(
       //backgroundColor: Color(0xFF001120),
       appBar: AppBar(
-        title: Row(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        backgroundColor: const Color(0xFF001120),
+        title: const Row(
           children: [
-            Text("Let's Learn With AI")
-            // InkWell(
-            //   onTap: () {
-            //     // Direct To Profile Page on Tap
-            //   },
-            //   child: Icon(Icons.person, color: Colors.white),
-            // ),
+            Text(
+              "Let's Learn With AI",
+              style: TextStyle(color: Colors.white),
+            )
           ],
         ),
-        backgroundColor: Colors.blue,
       ),
       body: FutureBuilder<Map<String, dynamic>>(
         future: futureQuizData,
@@ -106,9 +109,15 @@ class _QuizPageState extends State<QuizPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset('assets/rq_images/ErrorRobot.png', height: 150,),
+                  Image.asset(
+                    'assets/rq_images/ErrorRobot.png',
+                    height: 150,
+                  ),
                   SizedBox(height: 20),
-                  Text('Error: ${snapshot.error}', style: TextStyle(fontWeight: FontWeight.bold),),
+                  Text(
+                    'Error: ${snapshot.error}',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
             );
@@ -116,7 +125,8 @@ class _QuizPageState extends State<QuizPage> {
             var quizData = snapshot.data!;
             var story = quizData['Story'] ?? 'No story available';
             var scenario = quizData['Scenario'] ?? 'No scenario available';
-            var mostPositive = quizData['most_positive'] ?? 'No option available';
+            var mostPositive =
+                quizData['most_positive'] ?? 'No option available';
             var positive = quizData['positive'] ?? 'No option available';
             var neutral = quizData['neutral'] ?? 'No option available';
             var negative = quizData['negative'] ?? 'No option available';
@@ -130,7 +140,7 @@ class _QuizPageState extends State<QuizPage> {
               negative: 0,
             };
 
-            shuffleOptions();  // Shuffle options here
+            shuffleOptions(); // Shuffle options here
 
             return SingleChildScrollView(
               scrollDirection: Axis.vertical,
@@ -164,28 +174,33 @@ class _QuizPageState extends State<QuizPage> {
                         children: [
                           Text(
                             scenario,
-                            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
                           ),
                           SizedBox(height: 10),
                           ...List.generate(
                             _optionTexts.length,
-                                (index) => Container(
+                            (index) => Container(
                               margin: EdgeInsets.only(bottom: 10),
                               child: Row(
                                 children: [
                                   Radio(
                                     value: index,
                                     groupValue: _isSelected.indexOf(true),
-                                    onChanged: feedbackGiven ? null : (int? value) {
-                                      setState(() {
-                                        _isSelected = List.generate(_isSelected.length, (i) => i == index);
-                                        updatePoints(_optionTexts[index]);
-                                        showFeedbackDialog(feedback!);
-                                        if (widget.onCompletion != null) {
-                                          widget.onCompletion!();
-                                        }
-                                      });
-                                    },
+                                    onChanged: feedbackGiven
+                                        ? null
+                                        : (int? value) {
+                                            setState(() {
+                                              _isSelected = List.generate(
+                                                  _isSelected.length,
+                                                  (i) => i == index);
+                                              updatePoints(_optionTexts[index]);
+                                              showFeedbackDialog(feedback!);
+                                              if (widget.onCompletion != null) {
+                                                widget.onCompletion!();
+                                              }
+                                            });
+                                          },
                                   ),
                                   Expanded(child: Text(_optionTexts[index])),
                                 ],
@@ -203,7 +218,8 @@ class _QuizPageState extends State<QuizPage> {
                           children: [
                             Text(
                               'Points: $points',
-                              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.bold),
                             ),
                           ],
                         ),

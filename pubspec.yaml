@@ -73,7 +73,6 @@ flutter:
   assets:
     - assets/images/
     - assets/animation/
-    - assets/rq_images/ErrorRobot.png
     - assets/rq_images/
     - assets/HT_images/
 
