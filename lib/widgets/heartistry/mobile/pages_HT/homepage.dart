@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:uhv_project/widgets/heartistry/mobile/pages_HT/about.dart';
-import 'package:uhv_project/widgets/heartistry/mobile/pages_HT/chat.dart';
 import 'package:uhv_project/widgets/heartistry/mobile/pages_HT/gym.dart';
 import 'package:uhv_project/widgets/heartistry/mobile/pages_HT/home.dart';
 import 'package:uhv_project/widgets/heartistry/mobile/pages_HT/levels.dart';
@@ -48,13 +47,19 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             Text(
               'Hey There✨',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0, color: AppColors.textColor),
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24.0,
+                  color: AppColors.textColor),
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 8.0),
             Text(
               'How are you feeling today?',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: AppColors.textColor),
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0,
+                  color: AppColors.textColor),
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 4.0),
@@ -77,33 +82,44 @@ class HomePage extends StatelessWidget {
                 children: <Widget>[
                   GestureDetector(
                     onTap: () {
-                      _showEmotionDialog(context, 'Upset', 'Keep your spirits high!');
+                      _showEmotionDialog(
+                          context, 'Upset', 'Keep your spirits high!');
                     },
-                    child: EmotionBox(image: 'assets/HT_images/very_sad.png', text: 'Upset'),
+                    child: EmotionBox(
+                        image: 'assets/HT_images/very_sad.png', text: 'Upset'),
                   ),
                   GestureDetector(
                     onTap: () {
-                      _showEmotionDialog(context, 'Sad', 'It\'s okay to feel sad. Take your time to heal.');
+                      _showEmotionDialog(context, 'Sad',
+                          'It\'s okay to feel sad. Take your time to heal.');
                     },
-                    child: EmotionBox(image: 'assets/HT_images/very_sad.png', text: 'Sad'),
+                    child: EmotionBox(
+                        image: 'assets/HT_images/very_sad.png', text: 'Sad'),
                   ),
                   GestureDetector(
                     onTap: () {
-                      _showEmotionDialog(context, 'Neutral', 'Balance is good. Keep moving forward.');
+                      _showEmotionDialog(context, 'Neutral',
+                          'Balance is good. Keep moving forward.');
                     },
-                    child: EmotionBox(image: 'assets/HT_images/neutral.png', text: 'Neutral'),
+                    child: EmotionBox(
+                        image: 'assets/HT_images/neutral.png', text: 'Neutral'),
                   ),
                   GestureDetector(
                     onTap: () {
-                      _showEmotionDialog(context, 'Happy', 'Enjoy the moment and share your joy!');
+                      _showEmotionDialog(context, 'Happy',
+                          'Enjoy the moment and share your joy!');
                     },
-                    child: EmotionBox(image: 'assets/HT_images/happy.png', text: 'Happy'),
+                    child: EmotionBox(
+                        image: 'assets/HT_images/happy.png', text: 'Happy'),
                   ),
                   GestureDetector(
                     onTap: () {
-                      _showEmotionDialog(context, 'Excited', 'Channel that excitement into something amazing!');
+                      _showEmotionDialog(context, 'Excited',
+                          'Channel that excitement into something amazing!');
                     },
-                    child: EmotionBox(image: 'assets/HT_images/very_happy.png', text: 'Excited'),
+                    child: EmotionBox(
+                        image: 'assets/HT_images/very_happy.png',
+                        text: 'Excited'),
                   ),
                 ],
               ),
@@ -111,7 +127,10 @@ class HomePage extends StatelessWidget {
             SizedBox(height: 16.0),
             Text(
               'What do you want to do?',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0, color: AppColors.textColor),
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24.0,
+                  color: AppColors.textColor),
               textAlign: TextAlign.center,
             ),
             Text(
@@ -133,11 +152,16 @@ class HomePage extends StatelessWidget {
                   },
                   child: Column(
                     children: <Widget>[
-                      ActionBox(image: 'assets/HT_images/reflect.png', text: 'Reflect and Write'),
+                      ActionBox(
+                          image: 'assets/HT_images/reflect.png',
+                          text: 'Reflect and Write'),
                       SizedBox(height: 8.0),
                       Text(
                         'Reflect and Write',
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0, color: AppColors.textColor),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14.0,
+                            color: AppColors.textColor),
                         textAlign: TextAlign.center,
                       ),
                     ],
@@ -153,11 +177,16 @@ class HomePage extends StatelessWidget {
                   },
                   child: Column(
                     children: <Widget>[
-                      ActionBox(image: 'assets/HT_images/gym.png', text: 'Empathy Gym'),
+                      ActionBox(
+                          image: 'assets/HT_images/gym.png',
+                          text: 'Empathy Gym'),
                       SizedBox(height: 8.0),
                       Text(
                         'Lets Learn',
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0, color: AppColors.textColor),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14.0,
+                            color: AppColors.textColor),
                         textAlign: TextAlign.center,
                       ),
                     ],
@@ -179,11 +208,16 @@ class HomePage extends StatelessWidget {
                   },
                   child: Column(
                     children: <Widget>[
-                      ActionBox(image: 'assets/HT_images/chat.png', text: 'Chat it out'),
+                      ActionBox(
+                          image: 'assets/HT_images/chat.png',
+                          text: 'Chat it out'),
                       SizedBox(height: 8.0),
                       Text(
                         'Empathy Exercises',
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0, color: AppColors.textColor),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14.0,
+                            color: AppColors.textColor),
                         textAlign: TextAlign.center,
                       ),
                     ],
@@ -194,16 +228,21 @@ class HomePage extends StatelessWidget {
                     //Navigator.pushNamed(context, '/about'); // Navigate to about.dart
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => AboutPage()  ),
+                      MaterialPageRoute(builder: (context) => AboutPage()),
                     );
                   },
                   child: Column(
                     children: <Widget>[
-                      ActionBox(image: 'assets/HT_images/story.avif', text: 'Our Story'),
+                      ActionBox(
+                          image: 'assets/HT_images/story.avif',
+                          text: 'Our Story'),
                       SizedBox(height: 8.0),
                       Text(
                         'Our Story',
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0, color: AppColors.textColor),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14.0,
+                            color: AppColors.textColor),
                         textAlign: TextAlign.center,
                       ),
                     ],
@@ -219,7 +258,8 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  void _showEmotionDialog(BuildContext context, String emotion, String message) {
+  void _showEmotionDialog(
+      BuildContext context, String emotion, String message) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -303,7 +343,6 @@ class ActionBox extends StatelessWidget {
             width: 100.0,
             fit: BoxFit.contain,
           ),
-
         ],
       ),
     );

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math'; // for shuffling the options
 import '../requests/ApiService.dart';
-import 'package:uhv_project/widgets/rightsquest/Screens/levels_rq.dart';
 
 class QuizPage extends StatefulWidget {
   final String rightName;
@@ -70,7 +69,6 @@ class _QuizPageState extends State<QuizPage> {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
     return Scaffold(
       //backgroundColor: Color(0xFF001120),
       appBar: AppBar(
