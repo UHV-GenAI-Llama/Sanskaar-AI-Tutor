@@ -87,7 +87,7 @@ class _LoginWebState extends State<LoginWeb> {
                           Image.asset("assets/images/EcoResolve-logo.png",
                               height: 80),
                           const SizedBox(width: 10),
-                          const Text('UHV',
+                          const Text('Sanskaar AI Tutor',
                               style: TextStyle(
                                   fontSize: 60,
                                   color: CustomColor.greenPrimary,
@@ -102,7 +102,7 @@ class _LoginWebState extends State<LoginWeb> {
                           children: [
                             Flexible(
                               child: Text(
-                                "Discover local volunteering opportunities and resolve disputes with ease using our intelligent chatbots. Our Conflict Resolution Chatbot provides personalized guidance and strategies to address conflicts constructively, empowering you with effective communication tools to foster understanding. Meanwhile, the Community Service Chatbot helps you get involved and make a difference in your community effortlessly, offering tailored suggestions for service projects that match your interests and skills.",
+                                "Sanskaar AI Tutor envisions nurturing the next generation of empathetic, responsible, and open-minded citizens within India’s diverse and vibrant context. Tailored for all educational levels, this initiative is dedicated to fostering universal human values through the innovative use of Meta's Llama 3 models. Leveraging natural language generation and multi-linguality, Sanskaar AI fine-tunes six distinct models to address key areas such as ethics and moral education, human rights education, community service, conflict resolution, mindfulness, and empathy.",
                                 style: TextStyle(
                                   fontSize: 15,
                                   color: CustomColor.lightGrey,

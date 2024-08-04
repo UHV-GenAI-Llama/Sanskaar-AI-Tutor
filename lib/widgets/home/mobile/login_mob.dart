@@ -46,16 +46,18 @@ class _LoginMobState extends State<LoginMob> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset("assets/images/EcoResolve-logo.png",
-                        height: 40),
+                        height: 60),
                     const SizedBox(width: 10),
-                    const Text(
-                      'UHV',
-                      style: TextStyle(
-                        fontSize: 45,
-                        color: CustomColor.greenPrimary,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                    const SizedBox(
+                        width: 200,
+                        child: Text(
+                          'Sanskaar AI Tutor',
+                          style: TextStyle(
+                            fontSize: 45,
+                            color: CustomColor.greenPrimary,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )),
                   ],
                 ),
               ),

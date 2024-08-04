@@ -27,7 +27,7 @@ class Navbar extends StatelessWidget implements PreferredSizeWidget {
                 ),
                 const SizedBox(width: 8),
                 const Text(
-                  'UHV',
+                  'Sanskaar AI Tutor',
                   style: TextStyle(
                       fontSize: 25,
                       color: Color(0xff2EC4D8),

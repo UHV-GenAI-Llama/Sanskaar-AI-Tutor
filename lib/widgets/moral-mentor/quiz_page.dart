@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:uhv_project/pages/home.dart';
+import 'package:uhv_project/pages/moral-mentor.dart';
 import 'package:uhv_project/widgets/moral-mentor/data/questions.dart'; // Import the questions from the data file
 import 'package:uhv_project/widgets/moral-mentor/quiz_question.dart';
 import 'package:uhv_project/widgets/moral-mentor/quiz_result.dart';
@@ -78,10 +78,9 @@ class _QuizPageState extends State<QuizPage> {
           ),
           TextButton(
             onPressed: () {
-              context.go('/');
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => const HomePage(),
+                  builder: (context) => const MoralMentorPage(),
                 ),
               );
             },
@@ -216,7 +215,7 @@ class _QuizPageState extends State<QuizPage> {
                 context.go('/');
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const HomePage(),
+                    builder: (context) => const MoralMentorPage(),
                   ),
                 );
               },

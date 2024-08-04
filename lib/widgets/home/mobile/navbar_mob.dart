@@ -27,7 +27,7 @@ class NavbarMob extends StatelessWidget implements PreferredSizeWidget {
                   ),
                   const SizedBox(width: 6),
                   const Text(
-                    'UHV',
+                    'Sanskaar AI Tutor',
                     style: TextStyle(
                         fontSize: 20,
                         color: Color(0xff2EC4D8),

@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
                         Section(
                           title: 'Moral Mentor',
                           description:
-                              'At our Conflict Resolution Hub, we believe that every conflict holds an opportunity for growth and understanding. Our mission is to provide you with the tools and resources you need to navigate and resolve conflicts effectively. Whether you’re dealing with interpersonal issues, workplace disagreements, or community disputes, our platform offers comprehensive guides, expert advice, and practical strategies to help you achieve peaceful resolutions.',
+                              'An AI-powered app designed to nurture your ethical and moral development. Dive into quizzes on diverse topics such as Honesty, Truthfulness, Integrity, and Personal Values, tailored to enhance your understanding and application of these virtues. Engage with personalized content that challenges your perspectives and fosters growth in ethical decision-making. Explore the path to becoming a better version of yourself with Moral Mentor.',
                           buttonText: 'Moral Mentor',
                           onPressed: () {
                             context.go('/moral-mentor');
@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                         Section(
                           title: 'RightsQuest',
                           description:
-                              'At our Conflict Resolution Hub, we believe that every conflict holds an opportunity for growth and understanding. Our mission is to provide you with the tools and resources you need to navigate and resolve conflicts effectively. Whether you’re dealing with interpersonal issues, workplace disagreements, or community disputes, our platform offers comprehensive guides, expert advice, and practical strategies to help you achieve peaceful resolutions.',
+                              "An app dedicated to expanding your knowledge of fundamental rights and social justice. Engage with interactive quizzes on topics such as Basic Rights, Social Justice, Civil and Political Rights, and Children's Rights, tailored to deepen your understanding and awareness. Challenge yourself and stay informed with personalized content designed to promote advocacy and equality. Embark on a journey of empowerment and education with RightsQuest.",
                           buttonText: 'RightsQuest',
                           onPressed: () {
                             context.go('/rightsquest');
@@ -65,11 +65,10 @@ class _HomePageState extends State<HomePage> {
                         ),
                         const SizedBox(height: 60),
                         Section(
-                          title:
-                              'Community Service and Social Responsibility Platform',
+                          title: 'EcoPreserve',
                           description:
                               'We are dedicated to promoting social responsibility and community engagement. Our platform connects volunteers, organizations, and community members who share a passion for making a positive impact. Together, we can create meaningful change and build a stronger, more compassionate community.',
-                          buttonText: 'Community Service',
+                          buttonText: 'EcoPreserve',
                           onPressed: () {
                             context.go('/community-service');
                           },
@@ -91,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                         Section(
                             title: 'PrepPal',
                             description:
-                                'We are dedicated to promoting social responsibility and community engagement. Our platform connects volunteers, organizations, and community members who share a passion for making a positive impact. Together, we can create meaningful change and build a stronger, more compassionate community.',
+                                "Introducing 'PrepPal', your comprehensive companion for holistic exam preparation and well-being. Featuring four specialized chatbots, PrepPal offers tailored support for Exam Preparation, Stress Management, Fitness, and Nutrition. Whether you're seeking study tips, stress-relief techniques, workout routines, or dietary advice, PrepPal provides personalized guidance to help you excel academically and maintain a balanced lifestyle.",
                             buttonText: 'PrepPal',
                             onPressed: () {
                               context.go('/preppal');
@@ -101,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                         Section(
                             title: 'Heartistry',
                             description:
-                                'We are dedicated to promoting social responsibility and community engagement. Our platform connects volunteers, organizations, and community members who share a passion for making a positive impact. Together, we can create meaningful change and build a stronger, more compassionate community.',
+                                "Introducing 'Heartistry', an innovative app dedicated to cultivating empathy and compassion. Engage in Empathy Exercises, Reflect and Write in your journal, and explore the Let's Learn section to deepen your understanding of others' feelings. By participating in these activities, you'll develop the skills to better empathize and connect with those around you, fostering a more compassionate and understanding society.",
                             buttonText: 'Heartistry',
                             onPressed: () {
                               context.go('/heartistry');
@@ -113,7 +112,7 @@ class _HomePageState extends State<HomePage> {
                         SectionMob(
                           title: 'Moral Mentor',
                           description:
-                              'At our Conflict Resolution Hub, we believe that every conflict holds an opportunity for growth and understanding. Our mission is to provide you with the tools and resources you need to navigate and resolve conflicts effectively. Whether you’re dealing with interpersonal issues, workplace disagreements, or community disputes, our platform offers comprehensive guides, expert advice, and practical strategies to help you achieve peaceful resolutions.',
+                              'An AI-powered app designed to nurture your ethical and moral development. Dive into quizzes on diverse topics such as Honesty, Truthfulness, Integrity, and Personal Values, tailored to enhance your understanding and application of these virtues. Engage with personalized content that challenges your perspectives and fosters growth in ethical decision-making. Explore the path to becoming a better version of yourself with Moral Mentor.',
                           buttonText: 'Moral Mentor',
                           onPressed: () {
                             context.go('/moral-mentor');
@@ -124,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                         SectionMob(
                           title: 'RightsQuest',
                           description:
-                              'At our Conflict Resolution Hub, we believe that every conflict holds an opportunity for growth and understanding. Our mission is to provide you with the tools and resources you need to navigate and resolve conflicts effectively. Whether you’re dealing with interpersonal issues, workplace disagreements, or community disputes, our platform offers comprehensive guides, expert advice, and practical strategies to help you achieve peaceful resolutions.',
+                              "An app dedicated to expanding your knowledge of fundamental rights and social justice. Engage with interactive quizzes on topics such as Basic Rights, Social Justice, Civil and Political Rights, and Children's Rights, tailored to deepen your understanding and awareness. Challenge yourself and stay informed with personalized content designed to promote advocacy and equality. Embark on a journey of empowerment and education with RightsQuest.",
                           buttonText: 'RightsQuest',
                           onPressed: () {
                             context.go('/rightsquest');
@@ -133,11 +132,10 @@ class _HomePageState extends State<HomePage> {
                         ),
                         const SizedBox(height: 80),
                         SectionMob(
-                          title:
-                              'Community Service and Social Responsibility Platform',
+                          title: 'EcoPreserve',
                           description:
                               'We are dedicated to promoting social responsibility and community engagement. Our platform connects volunteers, organizations, and community members who share a passion for making a positive impact. Together, we can create meaningful change and build a stronger, more compassionate community.',
-                          buttonText: 'Community Service',
+                          buttonText: 'EcoPreserve',
                           onPressed: () {
                             context.go('/community-service');
                           },
@@ -158,7 +156,7 @@ class _HomePageState extends State<HomePage> {
                         SectionMob(
                           title: 'PrepPal',
                           description:
-                              'We are dedicated to promoting social responsibility and community engagement. Our platform connects volunteers, organizations, and community members who share a passion for making a positive impact. Together, we can create meaningful change and build a stronger, more compassionate community.',
+                              "Introducing 'PrepPal', your comprehensive companion for holistic exam preparation and well-being. Featuring four specialized chatbots, PrepPal offers tailored support for Exam Preparation, Stress Management, Fitness, and Nutrition. Whether you're seeking study tips, stress-relief techniques, workout routines, or dietary advice, PrepPal provides personalized guidance to help you excel academically and maintain a balanced lifestyle.",
                           buttonText: 'PrepPal',
                           onPressed: () {
                             context.go('/preppal');
@@ -169,7 +167,7 @@ class _HomePageState extends State<HomePage> {
                         SectionMob(
                           title: 'Heartistry',
                           description:
-                              'We are dedicated to promoting social responsibility and community engagement. Our platform connects volunteers, organizations, and community members who share a passion for making a positive impact. Together, we can create meaningful change and build a stronger, more compassionate community.',
+                              "Introducing 'Heartistry', an innovative app dedicated to cultivating empathy and compassion. Engage in Empathy Exercises, Reflect and Write in your journal, and explore the Let's Learn section to deepen your understanding of others' feelings. By participating in these activities, you'll develop the skills to better empathize and connect with those around you, fostering a more compassionate and understanding society.",
                           buttonText: 'Heartistry',
                           onPressed: () {
                             context.go('/heartistry');
