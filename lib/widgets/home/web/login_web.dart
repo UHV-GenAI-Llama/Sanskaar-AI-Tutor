@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:uhv_project/constants/colors.dart';
 import 'package:go_router/go_router.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginWeb extends StatefulWidget {
   const LoginWeb({super.key});
@@ -12,15 +13,46 @@ class LoginWeb extends StatefulWidget {
 class _LoginWebState extends State<LoginWeb> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  // final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  void _login(BuildContext context) {
-    // Navigate to the HomePage
+  Future<void> _login(BuildContext context) async {
+    /*
+    try {
+      UserCredential userCredential = await _auth.signInWithEmailAndPassword(
+        email: _emailController.text,
+        password: _passwordController.text,
+      );
+      print('Login successful: ${userCredential.user?.email}');
+      Navigator.pushReplacementNamed(context, '/'); // Navigate to home page
+    } on FirebaseAuthException catch (e) {
+      print('Sign-in error: ${e.message}');
+      _showErrorDialog(e.message);
+    } catch (e) {
+      print('Unknown error: $e');
+      _showErrorDialog(e.toString());
+    }*/
     context.go('/');
   }
 
   void _goToSignup(BuildContext context) {
     // Navigate to the SignUpWeb page
     context.go('/signup');
+  }
+
+  void _showErrorDialog(String? message) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Error'),
+        content: Text(message ?? 'An unknown error occurred.'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
